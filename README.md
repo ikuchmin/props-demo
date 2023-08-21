@@ -35,6 +35,11 @@ Do not forget to set up correct path to prop file in PropsDemoApplication
 3. Read section "Wrapping Configuration Builders" in Apache Commons Configuration[3]. Builder
    can manage state of configuration
 
+### Concerns
+
+Is it real needed to refresh properties without restarting app? Possible that
+industry is resolving the problem by restarting app
+
 ### References
 
 1. [Spring Boot Externalized Configuration](https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.external-config) 
