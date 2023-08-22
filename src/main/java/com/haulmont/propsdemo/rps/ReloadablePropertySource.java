@@ -1,27 +1,19 @@
-package com.haulmont.propsdemo.ps;
+package com.haulmont.propsdemo.rps;
 
 import lombok.SneakyThrows;
-import org.apache.commons.configuration2.Configuration;
 import org.apache.commons.configuration2.PropertiesConfiguration;
-import org.apache.commons.configuration2.builder.ConfigurationBuilder;
-import org.apache.commons.configuration2.builder.ConfigurationBuilderEvent;
-import org.apache.commons.configuration2.builder.ConfigurationBuilderResultCreatedEvent;
 import org.apache.commons.configuration2.builder.ReloadingFileBasedConfigurationBuilder;
 import org.apache.commons.configuration2.builder.fluent.Parameters;
 import org.apache.commons.configuration2.ex.ConfigurationException;
-import org.apache.commons.configuration2.reloading.PeriodicReloadingTrigger;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.env.EnumerablePropertySource;
-import org.springframework.core.env.PropertySource;
 import org.springframework.util.StringUtils;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import static org.apache.commons.configuration2.builder.ConfigurationBuilderEvent.RESET;
 import static org.apache.commons.configuration2.builder.ConfigurationBuilderResultCreatedEvent.RESULT_CREATED;

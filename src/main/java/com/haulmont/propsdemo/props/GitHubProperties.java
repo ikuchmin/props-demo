@@ -1,11 +1,11 @@
 package com.haulmont.propsdemo.props;
 
-import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties(prefix = "demo.github")
 public class GitHubProperties {
 
+    private String enabled;
     private String login;
 
     private String token;
@@ -24,5 +24,13 @@ public class GitHubProperties {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public String getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(String enabled) {
+        this.enabled = enabled;
     }
 }

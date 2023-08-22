@@ -1,8 +1,5 @@
 package com.haulmont.propsdemo.rps;
 
-import com.haulmont.propsdemo.ps.ReloadablePropertySource;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.core.env.PropertySource;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.FileUrlResource;
@@ -15,8 +12,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class ReloadablePropertySourceFactory extends DefaultPropertySourceFactory {
-
-    private static final Logger propSourceLogger = LoggerFactory.getLogger(ReloadablePropertySource.class);
 
     public static Map<String, ReloadablePropertySource> reloadablePropertySourceMap = new ConcurrentHashMap<>();
 

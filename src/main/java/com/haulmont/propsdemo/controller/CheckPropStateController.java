@@ -1,8 +1,10 @@
 package com.haulmont.propsdemo.controller;
 
+import com.haulmont.propsdemo.PropDependencyBean;
 import com.haulmont.propsdemo.props.DateProperties;
 import com.haulmont.propsdemo.props.GitHubProperties;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +21,9 @@ public class CheckPropStateController {
     @Autowired
     private GitHubProperties gitHubProperties;
 
+    @Autowired
+    private PropDependencyBean propDependencyBeanObjectFactory;
+
     @GetMapping(value = {"/date-tz"}, produces = "text/plain")
     public String getExternalTimeZone() {
         return dateProperties.getTimezone();
@@ -26,7 +31,7 @@ public class CheckPropStateController {
 
     @GetMapping(value = "/github-login", produces = "text/plain")
     public String getGitHubLogin() {
-        return gitHubProperties.getLogin();
+        return propDependencyBeanObjectFactory.getLogin();
     }
 
 
