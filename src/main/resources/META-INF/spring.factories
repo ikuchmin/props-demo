@@ -1,0 +1,3 @@
+# Environment Post Processors
+org.springframework.boot.env.EnvironmentPostProcessor=\
+com.haulmont.propsdemo.rps.ReloadablePropertySourceEnvironmentPostProcessor

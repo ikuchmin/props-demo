@@ -1,4 +1,4 @@
-package com.haulmont.propsdemo;
+package com.haulmont.propsdemo.props;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
